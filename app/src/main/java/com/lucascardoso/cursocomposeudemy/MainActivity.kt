@@ -36,6 +36,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lucascardoso.cursocomposeudemy.ui.theme.CursoComposeUdemyTheme
 import androidx.compose.runtime.*
+import components.SimpleButtom
+import components.SimpleText
+import components.TextFieldTeste
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +46,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Principal()
+            // Componentes de outros arquivos :
+            //TextFieldTeste()
+            //SimpleButtom()
+            //SimpleText()
             //ChangeBoxColorExample()
 
 
@@ -236,14 +243,19 @@ fun TesteModifier(){
 
         Spacer(modifier = Modifier.width(40.dp))
 
-        Button(
-            onClick = {
-                /*todo*/
-            }, modifier = Modifier
-                .padding(16.dp).align(Alignment.CenterVertically)
-        ){
-            Text(text = "Próxima Página")
+        Column{
+            Button(
+                onClick = {
+                    /*todo*/
+                }, modifier = Modifier
+                    .padding(16.dp)//.align(Alignment.CenterVertically)
+            ){
+                Text(text = "Próxima Página")
+            }
+            SimpleText() //
+
         }
+
 
 
     }
